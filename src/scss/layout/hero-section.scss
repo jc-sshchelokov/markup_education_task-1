@@ -1,0 +1,47 @@
+.hero {
+  padding: 104px 0 0 0;
+  overflow: hidden;
+  .deckor-block {
+    width: 100%;
+    max-width: 132px;
+    position: absolute;
+    top: -130px;
+    right: -125px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 440px;
+  }
+
+  &__visual {
+    width: 100%;
+    max-width: 696px;
+  }
+
+  &__title {
+    max-width: 265px;
+    line-height: 48px;
+  }
+
+  &__description {
+    margin: 31px 0 0 0;
+    width: 100%;
+    max-width: 365px;
+    color: var(--description-color);
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+  }
+
+  &__download-btn {
+    margin: 40px 0 0 0;
+  }
+}

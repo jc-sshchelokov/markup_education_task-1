@@ -1,0 +1,38 @@
+.btn {
+  padding: 20px 45px;
+  width: 100%;
+  max-width: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1.4px solid var(--blue-color);
+  border-radius: 55px;
+  background: var(--color-white);
+  transition: 0.3s;
+  &__icon {
+    display: block;
+    font-size: 15px;
+    color: red;
+    transition: 0.3s;
+    color: var(--blue-color);
+  }
+
+  &__text {
+    max-width: calc(100% - 11px);
+    display: block;
+    font-size: 18px;
+    color: var(--blue-color);
+    transition: 0.3s;
+  }
+
+  &:hover {
+    background: var(--blue-color);
+    .btn__icon {
+      color: var(--color-white);
+    }
+
+    .btn__text {
+      color: var(--color-white);
+    }
+  }
+}

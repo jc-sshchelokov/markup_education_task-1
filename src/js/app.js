@@ -5,6 +5,7 @@
 import $ from 'jquery';
 
 import dots from './modules/dots';
+import Swiper from 'swiper';
 
 // When DOM is ready
 $(() => {
