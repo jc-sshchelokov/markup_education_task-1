@@ -1,13 +1,21 @@
-  // core version + navigation, pagination modules:
-  import Swiper, { Navigation, Pagination } from 'swiper';
-  // import Swiper and modules styles
-  import 'swiper/css';
-  import 'swiper/css/navigation';
-  import 'swiper/css/pagination';
+import Swiper, { Navigation, Pagination } from 'swiper';
+Swiper.use([Navigation, Pagination]);
 
-  // configure Swiper to use modules
-  Swiper.use([Navigation, Pagination]);
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
 
-  // init Swiper:
- 
-  export default swiper;
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+export default swiper;

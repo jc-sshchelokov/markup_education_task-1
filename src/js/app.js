@@ -3,11 +3,8 @@
 // This file will be compiled into app.js
 // Feel free with using ES6 here.
 import $ from 'jquery';
-
-import dots from './modules/dots';
-import Swiper from 'swiper';
-
+import swiper from './modules/swiper';
 // When DOM is ready
 $(() => {
-  dots();
+  swiper;
 });
