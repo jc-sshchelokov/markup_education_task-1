@@ -1,7 +1,32 @@
 .check-articles {
   min-height: 1140px;
   padding: 168px 0;
+  &_relative {
+    position: relative;
+  }
+
+  &__deckor {
+    z-index: -1;
+    width: 133px;
+    position: absolute;
+    top: 100px;
+    left: -35px;
+
+    &_bottom {
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    &::before {
+      left: 48%;
+    }
+  }
+
   &__cards {
+    margin: 72px 0 0 0;
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 375px));
     grid-template-rows: minmax(512px, auto);
@@ -55,8 +80,8 @@
     align-items: flex-start;
     justify-content: center;
     span {
-        width: 100%;
-        max-width: 100%;
+      width: 100%;
+      max-width: 100%;
     }
   }
 }
