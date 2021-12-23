@@ -4,6 +4,10 @@
   &__wrapper {
     display: flex;
     align-items: initial;
+    @include media('<desktop') {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &_relative {
@@ -31,8 +35,12 @@
         bottom: -20px;
         width: 120px;
         min-height: 120px;
-        background: url('../images/decor-block.png') bottom left/contain no-repeat;
+        background: url('../images/decor-block.png') bottom left/contain
+          no-repeat;
       }
+    }
+    @include media('<phone') {
+      display: none;
     }
   }
 
@@ -66,6 +74,24 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
+    @include media('<widescreen') {
+      padding: 0 0 0 50px;
+    }
+
+    @include media('<desktop') {
+      padding: 50px 0 0 0;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    @include media('<phone') {
+      padding: 50px 0 0 0;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
   }
 
   &__info-list {
@@ -73,6 +99,17 @@
     margin: 0 120px 0 0;
     &:last-child {
       margin: 0;
+    }
+
+    @include media('<widescreen') {
+      margin: 0 60px 0 0;
+    }
+    @include media('<phone') {
+      margin: 50px 0 0 0;
+      text-align: center;
+      &:last-child {
+        margin: 50px 0 0 0;
+      }
     }
   }
 

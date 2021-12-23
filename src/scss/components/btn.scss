@@ -38,7 +38,7 @@
     .btn__text {
       color: var(--color-white);
     }
-    @include media('<phone') {
+    @include media('<=tablet') {
       background: var(--color-white);
       .btn__icon {
         color: var(--blue-color);

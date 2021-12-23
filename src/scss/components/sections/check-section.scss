@@ -1,5 +1,8 @@
 .check-articles {
   padding: 84px 0 168px 0;
+  @include media('<=desktop') {
+    padding: 40px 0;
+  }
   &_relative {
     position: relative;
   }
@@ -16,6 +19,10 @@
     &_bottom {
       bottom: 0;
       right: 0;
+    }
+
+    @include media('<phone') {
+      display: none;
     }
   }
 

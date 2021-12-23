@@ -1,6 +1,8 @@
 .about-customer {
   padding: 84px 0;
-
+  @include media('<desktop') {
+    padding: 40px 0;
+  }
   &__deckor-image {
     position: absolute;
     top: 260px;
@@ -9,6 +11,9 @@
     background: url('../images/decor-block.png') bottom left/contain no-repeat;
     z-index: 2;
     left: -45px;
+    @include media('<phone') {
+      display: none;
+    }
   }
   .swiper {
     width: 100%;
