@@ -3,7 +3,9 @@
   @include media('<desktop') {
     padding: 15px 0;
     position: fixed;
+    z-index: 1;
     width: 100%;
+    background-color: var(--color-white);
   }
   &__wrapper {
     display: flex;
@@ -25,7 +27,7 @@
     background-color: var(--color-white);
     width: 30px;
     height: 30px;
-    @include media('<=tablet') {
+    @include media('<desktop') {
       display: flex;
       position: absolute;
       top: 15px;
@@ -65,10 +67,10 @@
   }
 
   &__nav {
-    @include media('<=tablet') {
+    @include media('<desktop') {
       position: absolute;
       width: 50%;
-      background-color: var(--blue-color);
+      background: var(--blue-color);
       top: -15px;
       right: -100%;
       display: flex;
@@ -76,17 +78,21 @@
       min-height: 100vh;
       padding: 100px 0 0 0;
       transition: 0.5s all;
+     overflow: hidden;
       &_active {
         right: 0;
       }
     }
+    @include media('<phone') {
+      width: 100%;
+    } 
   }
 
   &__nav-list {
     display: flex;
     padding: 0;
     align-items: flex-start;
-    @include media('<=tablet') {
+    @include media('<desktop') {
       flex-direction: column;
     }
   }
@@ -96,7 +102,7 @@
     &:last-child {
       margin: 0;
     }
-    @include media('<=tablet') {
+    @include media('<desktop') {
       margin: 0;
     }
   }
@@ -118,8 +124,9 @@
       font-weight: 700;
       opacity: 1;
     }
-    @include media('<=tablet') {
+    @include media('<desktop') {
       color: var(--color-white);
+      opacity: 1;
       padding: 10px 0;
       &:hover {
         color: var(--color-white);

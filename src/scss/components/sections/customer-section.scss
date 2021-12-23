@@ -1,6 +1,5 @@
 .about-customer {
   padding: 84px 0;
-  min-height: 660px;
 
   &__deckor-image {
     position: absolute;
@@ -14,6 +13,10 @@
   .swiper {
     width: 100%;
     min-height: 500px;
+    padding: 0 0 50px 0;
+    @include media('<tablet') {
+      z-index: 0;
+    }
   }
 
   .swiper-slide {
@@ -23,6 +26,9 @@
     min-height: 425px;
     background: var(--slider-bg);
     border-radius: 24px;
+    @include media('<desktop') {
+      padding: 64px;
+    }
   }
 
   .swiper-pagination {
@@ -43,10 +49,48 @@
 
   .swiper-button-prev {
     left: 450px;
+    @include media('<widescreen') {
+      left: 350px;
+    }
+
+    @include media('<desktop') {
+      left: 250px;
+    }
+
+    @include media('<tablet') {
+      left: 150px;
+    }
+
+    @include media('<576px') {
+      left: 100px;
+    }
+
+    @include media('<phone') {
+      left: 50px;
+    }
   }
 
   .swiper-button-next {
     right: 450px;
+    @include media('<widescreen') {
+      right: 350px;
+    }
+
+    @include media('<desktop') {
+      right: 250px;
+    }
+
+    @include media('<tablet') {
+      right: 150px;
+    }
+
+    @include media('<576px') {
+      right: 100px;
+    }
+
+    @include media('<phone') {
+      right: 50px;
+    }
   }
 
   .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -56,6 +100,9 @@
     margin: 0 10px;
     width: 10px;
     height: 10px;
+    @include media('<phone') {
+      margin: 0 5px;
+    }
   }
 
   .slide-title {
@@ -66,12 +113,24 @@
       transform: translateX(-50%);
       background-color: var(--color-white);
     }
+
+    @include media('<phone') {
+      line-height: 36px;
+    }
   }
 
   .slide-customer {
     display: flex;
     align-items: center;
     padding: 66px 0 0 0;
+    @include media('<tablet') {
+      padding: 30px 0 0 0;
+      flex-wrap: wrap;
+    }
+
+    @include media('<700px') {
+      justify-content: center;
+    }
   }
 
   .slide-customer-photo {
@@ -89,6 +148,7 @@
     margin: 0;
     font-weight: 700;
     color: var(--color-white);
+    white-space: nowrap;
   }
 
   .slide-customer-oisition {
@@ -103,10 +163,27 @@
     width: 50%;
     display: flex;
     align-items: center;
+
+    @include media('<widescreen') {
+      padding: 0 15px 0 0;
+    }
+
+    @include media('<desktop') {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include media('<tablet') {
+      min-width: 275px;
+    }
   }
 
   .slide-text-wrapper {
     width: 50%;
+
+    @include media('<tablet') {
+      min-width: 275px;
+    }
   }
 
   .slide-customer-text {

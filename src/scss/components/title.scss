@@ -15,4 +15,10 @@
     height: 2px;
     background-color: var(--color-black);
   }
+
+  @include media('<phone') {
+    font-size: 30px;
+    line-height: 27px;
+    padding: 0 0 15px 0;
+  } 
 }

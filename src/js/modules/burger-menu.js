@@ -1,7 +1,7 @@
 const burgermenu = () => {
-  const burger = document.querySelector('.header__burger');
-  const navMenu = document.querySelector('.header__nav');
-  const navLink = document.querySelectorAll('.header__list-link');
+  const burger = document.querySelector('.header__burger'),
+    navMenu = document.querySelector('.header__nav'),
+    navLink = document.querySelectorAll('.header__list-link');
 
   const addActiveClass = () => {
     burger.classList.add('header__burger_active');
