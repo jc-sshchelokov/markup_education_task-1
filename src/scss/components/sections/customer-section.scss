@@ -1,11 +1,13 @@
 .about-customer {
-  padding: 168px 0 0 0;
+  padding: 84px 0;
   min-height: 660px;
 
   &__deckor-image {
     position: absolute;
-    top: 271px;
-    width: 133px;
+    top: 260px;
+    width: 132px;
+    min-height: 142px;
+    background: url('../images/decor-block.png') bottom left/contain no-repeat;
     z-index: 2;
     left: -45px;
   }
@@ -19,7 +21,7 @@
     width: 100%;
     height: auto;
     min-height: 425px;
-    background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
+    background: var(--slider-bg);
     border-radius: 24px;
   }
 
@@ -74,6 +76,8 @@
 
   .slide-customer-photo {
     width: 151px;
+    border-radius: 50%;
+    overflow: hidden;
   }
 
   .slide-customer-details {
@@ -101,11 +105,15 @@
     align-items: center;
   }
 
+  .slide-text-wrapper {
+    width: 50%;
+  }
+
   .slide-customer-text {
-    max-width: 366px;
+    max-width: 412px;
     margin: 0;
     color: var(--color-white);
-    line-height: 20px;
+    line-height: 30px;
     font-size: 18px;
     font-weight: 400;
     opacity: 0.9;

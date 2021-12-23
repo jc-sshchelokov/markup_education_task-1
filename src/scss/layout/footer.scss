@@ -1,0 +1,100 @@
+.footer {
+  padding: 118px 0 113px 0;
+  background: var(--footer-bg);
+  &__wrapper {
+    display: flex;
+    align-items: initial;
+  }
+
+  &_relative {
+    position: relative;
+  }
+
+  &__deckor {
+    position: absolute;
+    width: 132px;
+    min-height: 142px;
+    background: url('../images/decor-block.png') bottom left/contain no-repeat;
+    &_first {
+      top: -216px;
+      right: 0;
+    }
+
+    &_second {
+      overflow: hidden;
+      bottom: 0;
+      left: 0;
+      background: none;
+      .inner {
+        position: absolute;
+        left: -18px;
+        bottom: -20px;
+        width: 120px;
+        min-height: 120px;
+        background: url('../images/decor-block.png') bottom left/contain no-repeat;
+      }
+    }
+  }
+
+  &__info {
+    max-width: 391px;
+  }
+
+  &__info-text {
+    margin: 17px 0 0 0;
+  }
+
+  &__info-about {
+    margin: 0;
+    color: var(--color-white);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  &__copyright {
+    margin: 31px 0 0 0;
+    display: block;
+    color: var(--color-white);
+    font-size: 16px;
+  }
+
+  &__info-lists {
+    width: 100%;
+    padding: 0 0 0 145px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  &__info-list {
+    padding: 0;
+    margin: 0 120px 0 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__list-title {
+    font-size: 20px;
+    margin: 0 0 25px 0;
+    color: var(--color-white);
+  }
+
+  &__list-item {
+    list-style-type: none;
+  }
+
+  &__list-link {
+    display: block;
+    text-decoration: none;
+    padding: 6px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--color-white);
+    transition: 0.3s all;
+    &:hover {
+      color: var(--description-color);
+    }
+  }
+}

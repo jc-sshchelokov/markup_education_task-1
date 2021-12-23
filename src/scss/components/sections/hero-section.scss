@@ -1,10 +1,11 @@
 .hero {
-  padding: 104px 0 0 0;
+  padding: 104px 0 84px 0;
   overflow: hidden;
   min-height: 534px;
   .deckor-block {
-    width: 100%;
-    max-width: 132px;
+    width: 135px;
+    min-height: 145px;
+    background: url('../images/decor-block.png')bottom left/contain no-repeat;
     position: absolute;
     top: -130px;
     right: -125px;
@@ -18,12 +19,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
     max-width: 440px;
   }
 
   &__visual {
-    width: 100%;
     max-width: 696px;
   }
 
@@ -34,7 +33,6 @@
 
   &__description {
     margin: 31px 0 0 0;
-    width: 100%;
     max-width: 365px;
     color: var(--description-color);
     font-size: 18px;
