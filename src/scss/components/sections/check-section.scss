@@ -65,17 +65,22 @@
   }
 
   &__card-link {
-    display: flex;
-    align-items: center;
+    width: 40%;
+    display: block;
     color: var(--blue-color);
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     margin: 25px 0 0 0;
-    i {
-      padding: 0 0 0 10px;
-      display: block;
+    position: relative;
+    &::before {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
       font-size: 9px;
+      @extend [class*=' icon-'];
+      @extend .icon-right;
     }
   }
 
