@@ -133,6 +133,9 @@
     transition: 0.3s all;
     &:hover {
       color: var(--description-color);
+      @include media('<=tablet') {
+        color: var(--color-white);
+      }
     }
   }
 }

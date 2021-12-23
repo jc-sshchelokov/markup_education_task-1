@@ -19,7 +19,7 @@
     width: 100%;
     min-height: 500px;
     padding: 0 0 50px 0;
-    @include media('<tablet') {
+    @include media('<desktop') {
       z-index: 0;
     }
   }
