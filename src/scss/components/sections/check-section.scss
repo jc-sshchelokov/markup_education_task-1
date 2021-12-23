@@ -58,7 +58,7 @@
   }
 
   &__card-text {
-    padding: 21px 36px;
+    padding: 21px 36px 50px 36px;
   }
 
   &__card-title {
@@ -80,6 +80,7 @@
   }
 
   &__card-link {
+    padding: 0 17px 0 0;
     width: 30%;
     display: block;
     color: var(--blue-color);

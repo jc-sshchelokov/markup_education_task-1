@@ -58,4 +58,19 @@
   &__download-btn {
     margin: 40px 0 0 0;
   }
+
+  &__download-text {
+    display: block;
+    padding: 0 20px 0 0;
+    position: relative;
+    &::before {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @extend [class*=' icon-'];
+      @extend .icon-down;
+      font-size: 15px;
+    }
+  }
 }
