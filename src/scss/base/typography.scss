@@ -41,10 +41,11 @@ h6, .h6 {
 
 p {
   margin: 0 0 1em;
+  color: var(--description-color)
 }
 
 a {
-  color: var(--base-link-color);
+  color: var(--blue-color);
   &:focus {
     text-decoration: none;
   }
