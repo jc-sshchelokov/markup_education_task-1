@@ -33,16 +33,25 @@
     grid-template-rows: minmax(512px, auto);
     grid-auto-rows: minmax(512px, auto);
     gap: 36px;
+    @include media('<=desktop') {
+      grid-template-columns: repeat(2, minmax(200px, 375px));
+      justify-content: center;
+    }
+
+    @include media('<=650px') {
+      grid-template-columns: repeat(1, minmax(200px, 375px));
+    }
   }
 
   &__card {
     box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
   }
 
   &__card-text {
-    padding: 21px 36px 0 36px;
+    padding: 21px 36px;
   }
 
   &__card-title {
@@ -65,14 +74,18 @@
   }
 
   &__card-link {
-    width: 40%;
+    width: 30%;
     display: block;
     color: var(--blue-color);
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     margin: 25px 0 0 0;
-    position: relative;
+    position: absolute;
+    bottom: 30px;
+    @include media('<widescreen') {
+      width: 35%;
+    }
     &::before {
       right: 0;
       top: 50%;
@@ -89,5 +102,8 @@
     margin: 72px auto 0;
     align-items: flex-start;
     justify-content: center;
+    @include media('<=tablet') {
+      margin: 32px auto 0;
+    }
   }
 }
