@@ -1,4 +1,6 @@
 .btn {
+  @include animate(background);
+
   padding: 16px 15px;
   width: 100%;
   max-width: 210px;
@@ -8,7 +10,7 @@
   border: 1.4px solid var(--blue-color);
   border-radius: 55px;
   background: var(--color-white);
-  @include animate;
+  
   @include media('<phone') {
     padding: 10px 15px;
     max-width: 180px;

@@ -5,10 +5,8 @@
 import $ from 'jquery';
 import swiper from './modules/swiper';
 import burgermenu from './modules/burger-menu';
-import goTo from './modules/go-to';
 // When DOM is ready
 $(() => {
   swiper;
   burgermenu();
-  goTo();
 });

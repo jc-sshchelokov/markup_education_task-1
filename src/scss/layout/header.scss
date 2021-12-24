@@ -119,7 +119,7 @@
     opacity: 0.5;
     font-size: 18px;
     font-weight: 400;
-    transition: 0.3s all;
+    @include animate(opacity);
     &:hover {
       opacity: 1;
     }
