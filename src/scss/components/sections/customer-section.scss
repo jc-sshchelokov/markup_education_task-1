@@ -27,18 +27,24 @@
 
   .swiper-slide {
     padding: 64px 126px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: auto;
-    min-height: 425px;
     background: var(--slider-bg);
     border-radius: 24px;
     @include media('<desktop') {
-      padding: 64px;
+      padding: 25px;
     }
     @include media('<tablet') {
       min-height: auto;
       padding: 15px;
     }
+  }
+
+  .swiper-slide-wrapper {
+    width: 100%;
   }
 
   .swiper-pagination {
@@ -123,22 +129,49 @@
   .slide-customer {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 66px 0 0 0;
+    @include media('<desktop') {
+      padding: 33px 0 0 0;
+    }
+
     @include media('<tablet') {
-      padding: 30px 0 0 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include media('<tablet') {
+      flex-wrap: wrap;
+      justify-content: flex-start;
     }
   }
 
   .slide-customer-photo {
+    border: 5px solid #fff;
     width: 151px;
+    height: 151px;
     border-radius: 50%;
     overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @include media('<phone') {
+      width: 120px;
+      height: 120px;
+    }
+
+    @include media('<350px') {
+      width: 110px;
+      height: 110px;
+    }
   }
 
   .slide-customer-details {
     padding: 0 0 0 31px;
-    @include media('<tablet') {
-      padding: 0;
+    @include media('<phone') {
+      padding: 0 0 0 10px;
     }
   }
 
@@ -148,9 +181,12 @@
     font-weight: 700;
     color: var(--color-white);
     white-space: nowrap;
+    @include media('<phone') {
+      font-size: 18px;
+    }
   }
 
-  .slide-customer-oisition {
+  .slide-customer-poisition {
     font-size: 18px;
     font-weight: 400;
     opacity: 0.8;
@@ -159,29 +195,24 @@
     @include media('<tablet') {
       margin: 0;
     }
+
+    @include media('<phone') {
+      font-size: 16px;
+    }
   }
 
   .slide-customer-info {
-    width: 50%;
     display: flex;
     align-items: center;
-
-    @include media('<widescreen') {
-      padding: 0 15px 0 0;
-    }
-
-    @include media('<desktop') {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    @include media('<tablet') {
-      justify-content: flex-start;
-    }
   }
 
   .slide-text-wrapper {
-    width: 50%
+    @include media('<1100px') {
+      padding: 0 0 0 15px;
+    }
+    @include media('<phone') {
+      padding: 0;
+    }
   }
 
   .slide-customer-text {
@@ -192,5 +223,9 @@
     font-size: 18px;
     font-weight: 400;
     opacity: 0.9;
+    @include media('<phone') {
+      font-size: 16px;
+      line-height: 25px;
+    }
   }
 }

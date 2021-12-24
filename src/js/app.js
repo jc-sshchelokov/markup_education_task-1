@@ -7,6 +7,7 @@ import swiper from './modules/swiper';
 import burgermenu from './modules/burger-menu';
 // When DOM is ready
 $(() => {
+  /* eslint-disable no-unused-expressions */
   swiper;
   burgermenu();
 });
