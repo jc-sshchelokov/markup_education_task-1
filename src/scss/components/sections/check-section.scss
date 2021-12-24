@@ -3,6 +3,7 @@
   @include media('<=desktop') {
     padding: 40px 0;
   }
+
   &_relative {
     position: relative;
   }
@@ -15,12 +16,10 @@
     position: absolute;
     top: 75px;
     left: -35px;
-
     &_bottom {
       bottom: 0;
       right: 0;
     }
-
     @include media('<phone') {
       display: none;
     }
@@ -44,7 +43,6 @@
       grid-template-columns: repeat(2, minmax(200px, 375px));
       justify-content: center;
     }
-
     @include media('<=650px') {
       grid-template-columns: repeat(1, minmax(200px, 375px));
     }
@@ -67,7 +65,7 @@
     line-height: 32px;
     margin: 0;
   }
-
+  
   &__card-description {
     margin: 12px 0 0 0;
   }
@@ -103,7 +101,7 @@
       @extend .icon-right;
     }
   }
-
+  
   &__view-btn {
     display: flex;
     margin: 72px auto 0;

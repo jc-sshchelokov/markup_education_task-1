@@ -2,26 +2,27 @@
   padding: 104px 0 84px 0;
   overflow: hidden;
   min-height: 534px;
-  @include media("<desktop") {
+  @include media('<desktop') {
     padding: 104px 0 44px 0;
   }
+
   .deckor-block {
     width: 135px;
     min-height: 145px;
-    background: url('../images/decor-block.png')bottom left/contain no-repeat;
+    background: url('../images/decor-block.png') bottom left/contain no-repeat;
     position: absolute;
     top: -130px;
     right: -125px;
-    @include media("<desktop") {
-     display: none;
+    @include media('<desktop') {
+      display: none;
     }
   }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    @include media("<desktop") {
+    @include media('<tablet') {
       flex-wrap: wrap;
-      justify-content: center;
     }
   }
 
@@ -34,14 +35,18 @@
 
   &__visual {
     max-width: 696px;
-    @include media("<desktop") {
-    margin: 50px 0 0 0;
+    @include media('<desktop') {
+      margin: 50px 0 0 0;
+      max-width: 500px;
     }
   }
 
   &__title {
     max-width: 265px;
     line-height: 48px;
+    @include media('<tablet') {
+      padding: 0 0 20px 0;
+    }
   }
 
   &__description {
@@ -50,7 +55,7 @@
     font-size: 18px;
     line-height: 30px;
     font-weight: 300;
-    @include media("<phone") {
+    @include media('<phone') {
       font-size: 16px;
     }
   }

@@ -3,6 +3,7 @@
   @include media('<desktop') {
     padding: 40px 0;
   }
+
   &__deckor-image {
     position: absolute;
     top: 260px;
@@ -15,9 +16,9 @@
       display: none;
     }
   }
+
   .swiper {
     width: 100%;
-    min-height: 500px;
     padding: 0 0 50px 0;
     @include media('<desktop') {
       z-index: 0;
@@ -33,6 +34,10 @@
     border-radius: 24px;
     @include media('<desktop') {
       padding: 64px;
+    }
+    @include media('<tablet') {
+      min-height: auto;
+      padding: 15px;
     }
   }
 
@@ -63,15 +68,7 @@
     }
 
     @include media('<tablet') {
-      left: 150px;
-    }
-
-    @include media('<576px') {
-      left: 100px;
-    }
-
-    @include media('<phone') {
-      left: 50px;
+      display: none;
     }
   }
 
@@ -86,15 +83,7 @@
     }
 
     @include media('<tablet') {
-      right: 150px;
-    }
-
-    @include media('<576px') {
-      right: 100px;
-    }
-
-    @include media('<phone') {
-      right: 50px;
+      display: none;
     }
   }
 
@@ -117,8 +106,15 @@
       left: 50%;
       transform: translateX(-50%);
       background-color: var(--color-white);
+      @include media('<tablet') {
+        left: 0;
+        transform: unset;
+      }
     }
-
+    @include media('<tablet') {
+      padding: 0 0 20px 0;
+      text-align: left;
+    }
     @include media('<phone') {
       line-height: 36px;
     }
@@ -130,11 +126,6 @@
     padding: 66px 0 0 0;
     @include media('<tablet') {
       padding: 30px 0 0 0;
-      flex-wrap: wrap;
-    }
-
-    @include media('<700px') {
-      justify-content: center;
     }
   }
 
@@ -146,6 +137,9 @@
 
   .slide-customer-details {
     padding: 0 0 0 31px;
+    @include media('<tablet') {
+      padding: 0;
+    }
   }
 
   .slide-customer-name {
@@ -162,6 +156,9 @@
     opacity: 0.8;
     color: var(--color-white);
     line-height: 48px;
+    @include media('<tablet') {
+      margin: 0;
+    }
   }
 
   .slide-customer-info {
@@ -179,7 +176,7 @@
     }
 
     @include media('<tablet') {
-      min-width: 275px;
+      justify-content: flex-start;
     }
   }
 
@@ -187,7 +184,6 @@
     width: 50%;
 
     @include media('<tablet') {
-      min-width: 275px;
     }
   }
 

@@ -1,17 +1,22 @@
 .header {
   padding: 61px 0 104px 0;
   @include media('<desktop') {
+    padding: 30px 0;
+  }
+  @include media('<=tablet') {
     padding: 15px 0;
     position: fixed;
     z-index: 1;
     width: 100%;
     background-color: var(--color-white);
   }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   &-logo {
     max-width: 173px;
   }
@@ -27,7 +32,7 @@
     background-color: var(--color-white);
     width: 30px;
     height: 30px;
-    @include media('<desktop') {
+    @include media('<=tablet') {
       display: flex;
       position: absolute;
       top: 15px;
@@ -42,7 +47,6 @@
       transition: 0.5s all;
       border-radius: 4px;
     }
-
     &_active {
       background-color: transparent;
       border-color: var(--color-white);
@@ -57,7 +61,6 @@
         &:nth-child(2) {
           opacity: 0;
         }
-
         &:nth-child(3) {
           transform: rotate(45deg);
           background-color: var(--color-white);
@@ -67,7 +70,7 @@
   }
 
   &__nav {
-    @include media('<desktop') {
+    @include media('<=tablet') {
       position: absolute;
       width: 50%;
       background: var(--blue-color);
@@ -78,31 +81,32 @@
       min-height: 100vh;
       padding: 100px 0 0 0;
       transition: 0.5s all;
-     overflow: hidden;
+      overflow: hidden;
       &_active {
         right: 0;
       }
     }
     @include media('<phone') {
       width: 100%;
-    } 
+    }
   }
 
   &__nav-list {
     display: flex;
     padding: 0;
     align-items: flex-start;
-    @include media('<desktop') {
+    @include media('<=tablet') {
       flex-direction: column;
     }
   }
+
   &__list-item {
     margin: 0 39px 0 0;
     list-style-type: none;
     &:last-child {
       margin: 0;
     }
-    @include media('<desktop') {
+    @include media('<=tablet') {
       margin: 0;
     }
   }
@@ -119,12 +123,11 @@
     &:hover {
       opacity: 1;
     }
-
     &_active {
       font-weight: 700;
       opacity: 1;
     }
-    @include media('<desktop') {
+    @include media('<=tablet') {
       color: var(--color-white);
       opacity: 1;
       padding: 10px 0;

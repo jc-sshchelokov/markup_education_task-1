@@ -8,7 +8,7 @@
   border: 1.4px solid var(--blue-color);
   border-radius: 55px;
   background: var(--color-white);
-  transition: 0.3s;
+  @include animate;
   @include media('<phone') {
     padding: 10px 15px;
     max-width: 180px;
@@ -25,16 +25,14 @@
   &:hover {
     background: var(--blue-color);
 
-    .btn__text {
-      color: var(--color-white);
-    }
     @include media('<=tablet') {
       background: var(--color-white);
-      .btn__icon {
-        color: var(--blue-color);
-      }
+    }
 
-      .btn__text {
+    .btn__text {
+      color: var(--color-white);
+
+      @include media('<=tablet') {
         color: var(--blue-color);
       }
     }
