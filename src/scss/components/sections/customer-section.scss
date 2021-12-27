@@ -1,25 +1,29 @@
 .about-customer {
-  padding: 84px 0;
+  margin: 0 0 168px 0;
   @include media('<desktop') {
-    padding: 40px 0;
+    margin: 0 0 84px 0;
   }
 
-  &__deckor-image {
-    position: absolute;
-    top: 260px;
-    width: 132px;
-    min-height: 142px;
-    background: url('../images/decor-block.png') bottom left/contain no-repeat;
-    z-index: 2;
-    left: -45px;
-    @include media('<phone') {
-      display: none;
+  &__wrapper {
+    &::before {
+      content: '';
+      display: block;
+      width: 132px;
+      min-height: 142px;
+      position: absolute;
+      top: 241px;
+      left: -45px;
+      background: url('../images/decor-block.png') bottom left/contain no-repeat;
+      z-index: 2;
+      @include media('<phone') {
+        display: none;
+      }
     }
   }
 
   .swiper {
     width: 100%;
-    padding: 0 0 50px 0;
+    padding: 0 0 60px 0;
     @include media('<desktop') {
       z-index: 0;
     }
@@ -39,7 +43,12 @@
     }
     @include media('<tablet') {
       min-height: auto;
-      padding: 15px;
+      padding: 45px 15px;
+    }
+
+    @include media('<phone') {
+      min-height: auto;
+      padding: 25px 15px;
     }
   }
 
@@ -112,14 +121,10 @@
       left: 50%;
       transform: translateX(-50%);
       background-color: var(--color-white);
-      @include media('<tablet') {
-        left: 0;
-        transform: unset;
-      }
     }
     @include media('<tablet') {
       padding: 0 0 20px 0;
-      text-align: left;
+      text-align: center;
     }
     @include media('<phone') {
       line-height: 36px;
@@ -138,11 +143,6 @@
     @include media('<tablet') {
       flex-wrap: wrap;
       justify-content: center;
-    }
-
-    @include media('<tablet') {
-      flex-wrap: wrap;
-      justify-content: flex-start;
     }
   }
 
@@ -195,21 +195,27 @@
     @include media('<tablet') {
       margin: 0;
     }
-
-    @include media('<phone') {
-      font-size: 16px;
-    }
   }
 
   .slide-customer-info {
     display: flex;
     align-items: center;
+    @include media('<tablet') {
+      margin: 0 0 25px 0;
+    }
+
+    @include media('<phone') {
+      flex-direction: column;
+      text-align: center;
+      margin: 0 0 15px 0;
+    }
   }
 
   .slide-text-wrapper {
     @include media('<1100px') {
       padding: 0 0 0 15px;
     }
+
     @include media('<phone') {
       padding: 0;
     }
@@ -223,6 +229,11 @@
     font-size: 18px;
     font-weight: 400;
     opacity: 0.9;
+
+    @include media('<tablet') {
+      text-align: center;
+    }
+
     @include media('<phone') {
       font-size: 16px;
       line-height: 25px;

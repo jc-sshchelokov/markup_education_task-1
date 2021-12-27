@@ -1,14 +1,15 @@
 .header {
-  padding: 61px 0 104px 0;
+  padding: 56px 0 0 0;
+  margin: 0 0 96px 0;
   @include media('<desktop') {
-    padding: 30px 0;
+    padding: 30px 0 0 0;
+    margin: 0 0 30px 0;
   }
-  @include media('<=tablet') {
-    padding: 15px 0;
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    background-color: var(--color-white);
+
+  @include media('<tablet') {
+    .container {
+      position: static;
+    }
   }
 
   &__wrapper {
@@ -32,10 +33,10 @@
     background-color: var(--color-white);
     width: 30px;
     height: 30px;
-    @include media('<=tablet') {
+    @include media('<tablet') {
       display: flex;
       position: absolute;
-      top: 15px;
+      top: 30px;
       right: 15px;
       z-index: 1;
     }
@@ -70,32 +71,30 @@
   }
 
   &__nav {
-    @include media('<=tablet') {
+    @include media('<tablet') {
       position: absolute;
-      width: 50%;
+      z-index: 1;
+      width: 100%;
+      top: -100%;
+      left: 0;
+      min-height: 0;
       background: var(--blue-color);
-      top: -15px;
-      right: -100%;
       display: flex;
       justify-content: center;
-      min-height: 100vh;
-      padding: 100px 0 0 0;
-      transition: 0.5s all;
-      overflow: hidden;
+      transition: 0.5s ease-in-out;
       &_active {
-        right: 0;
+        padding: 50px 0;
+        top: 0;
       }
-    }
-    @include media('<phone') {
-      width: 100%;
     }
   }
 
   &__nav-list {
     display: flex;
     padding: 0;
+    margin: 0;
     align-items: flex-start;
-    @include media('<=tablet') {
+    @include media('<tablet') {
       flex-direction: column;
     }
   }
@@ -106,7 +105,7 @@
     &:last-child {
       margin: 0;
     }
-    @include media('<=tablet') {
+    @include media('<tablet') {
       margin: 0;
     }
   }
@@ -127,7 +126,7 @@
       font-weight: 700;
       opacity: 1;
     }
-    @include media('<=tablet') {
+    @include media('<tablet') {
       color: var(--color-white);
       opacity: 1;
       padding: 10px 0;

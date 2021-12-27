@@ -1,13 +1,16 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
-Swiper.use([Navigation, Pagination]);
+import Swiper, { Navigation, Pagination,  EffectFade} from 'swiper';
+Swiper.use([Navigation, Pagination, EffectFade]);
 
 const swiper = new Swiper('.swiper', {
   // Optional parameters
-  direction: 'horizontal',
-  loop: false,
-  spaceBetween: 20,
-  speed: 700,
-  effect: 'cube',
+  // direction: 'horizontal',
+  // loop: false,
+  // spaceBetween: 20,
+  speed: 1000,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
 
   // If we need pagination
   pagination: {
