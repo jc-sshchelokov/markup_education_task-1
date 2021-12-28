@@ -11,25 +11,20 @@
   font-weight: 700;
   color: var(--blue-color);
 
+  @include media("<tablet") {
+    padding: 10px 45px;
+  }
+
   @include media('<phone') {
-    padding: 10px 15px;
     max-width: 180px;
   }
 
   &:hover {
     background: var(--blue-color);
     color: var(--color-white);
-
-    @include media('<tablet') {
+    @include media("<tablet") {
       background: var(--color-white);
-    }
-
-    .btn__text {
-      color: var(--color-white);
-
-      @include media('<tablet') {
-        color: var(--blue-color);
-      }
+      color: var(--blue-color);
     }
   }
 }

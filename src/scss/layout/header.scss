@@ -1,6 +1,7 @@
 .header {
   padding: 56px 0 0 0;
   margin: 0 0 96px 0;
+
   @include media('<desktop') {
     padding: 30px 0 0 0;
     margin: 0 0 30px 0;
@@ -33,6 +34,7 @@
     background-color: var(--color-white);
     width: 30px;
     height: 30px;
+
     @include media('<tablet') {
       display: flex;
       position: absolute;
@@ -40,6 +42,7 @@
       right: 15px;
       z-index: 1;
     }
+
     span {
       display: block;
       width: 100%;
@@ -48,9 +51,11 @@
       transition: 0.5s all;
       border-radius: 4px;
     }
+
     &_active {
       background-color: transparent;
       border-color: var(--color-white);
+
       span {
         position: absolute;
         top: 50%;
@@ -66,72 +71,6 @@
           transform: rotate(45deg);
           background-color: var(--color-white);
         }
-      }
-    }
-  }
-
-  &__nav {
-    @include media('<tablet') {
-      position: absolute;
-      z-index: 1;
-      width: 100%;
-      top: -100%;
-      left: 0;
-      min-height: 0;
-      background: var(--blue-color);
-      display: flex;
-      justify-content: center;
-      transition: 0.5s ease-in-out;
-      &_active {
-        padding: 50px 0;
-        top: 0;
-      }
-    }
-  }
-
-  &__nav-list {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    align-items: flex-start;
-    @include media('<tablet') {
-      flex-direction: column;
-    }
-  }
-
-  &__list-item {
-    margin: 0 39px 0 0;
-    list-style-type: none;
-    &:last-child {
-      margin: 0;
-    }
-    @include media('<tablet') {
-      margin: 0;
-    }
-  }
-
-  &__list-link {
-    text-decoration: none;
-    max-width: 105px;
-    display: block;
-    color: var(--header-links);
-    opacity: 0.5;
-    font-size: 18px;
-    font-weight: 400;
-    @include animate(opacity);
-    &:hover {
-      opacity: 1;
-    }
-    &_active {
-      font-weight: 700;
-      opacity: 1;
-    }
-    @include media('<tablet') {
-      color: var(--color-white);
-      opacity: 1;
-      padding: 10px 0;
-      &:hover {
-        color: var(--color-white);
       }
     }
   }

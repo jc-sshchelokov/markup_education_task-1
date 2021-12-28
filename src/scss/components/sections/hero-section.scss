@@ -13,21 +13,27 @@
     padding: 50px 0 0 0;
   }
 
-  .deckor-block {
-    width: 135px;
-    min-height: 145px;
-    background: url('../images/decor-block.png') bottom left/contain no-repeat;
-    position: absolute;
-    top: -130px;
-    right: -125px;
-    @include media('<desktop') {
-      display: none;
+  .container {
+    &:before {
+      display: block;
+      content: '';
+      width: 135px;
+      min-height: 145px;
+      background: url('../images/decor-block.png') bottom left/contain no-repeat;
+      position: absolute;
+      top: -130px;
+      right: -125px;
+
+      @include media('<desktop') {
+        display: none;
+      }
     }
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
     @include media('<tablet') {
       flex-wrap: wrap;
     }
@@ -42,6 +48,7 @@
 
   &__visual {
     max-width: 696px;
+
     @include media('<desktop') {
       margin: 50px 0 0 0;
       max-width: 500px;
@@ -51,6 +58,7 @@
   &__title {
     max-width: 265px;
     line-height: 48px;
+
     @include media('<tablet') {
       padding: 0 0 20px 0;
     }
@@ -62,6 +70,7 @@
     font-size: 18px;
     line-height: 30px;
     font-weight: 300;
+
     @include media('<phone') {
       font-size: 16px;
     }
@@ -69,17 +78,22 @@
 
   &__download-btn {
     margin: 40px auto 0 0;
-    padding: 16px 55px 16px 45px;
     position: relative;
     text-align: left;
     &::before {
       position: absolute;
       display: block;
+
       @extend [class*=' icon-'];
       @extend .icon-down;
+
       right: 40px;
       top: 50%;
       transform: translateY(-50%);
+
+      @include media('<tablet') {
+        right: 32px;
+      }
     }
   }
 
@@ -92,8 +106,10 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
+
       @extend [class*=' icon-'];
       @extend .icon-down;
+      
       font-size: 15px;
       font-weight: 700;
     }

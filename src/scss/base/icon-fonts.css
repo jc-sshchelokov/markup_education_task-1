@@ -3,9 +3,7 @@
   src: url('../../icon-fonts/icomoon.eot?avusmz');
   src: url('../../icon-fonts/icomoon.eot?avusmz#iefix')
       format('embedded-opentype'),
-    url('../../icon-fonts/icomoon.ttf?avusmz') format('truetype'),
-    url('../../icon-fonts/icomoon.woff?avusmz') format('woff'),
-    url('../../icon-fonts/icomoon.svg?avusmz#icomoon') format('svg');
+    url('../../icon-fonts/icomoon.woff?avusmz') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
