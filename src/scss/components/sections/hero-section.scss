@@ -1,8 +1,4 @@
 .hero {
-  padding: 104px 0 0 0;
-  margin: 0 0 168px 0;
-  overflow: hidden;
-  min-height: 534px;
 
   @include media('<desktop') {
     margin: 0 0 84px 0;
@@ -13,87 +9,109 @@
     padding: 50px 0 0 0;
   }
 
+  padding: 120px 0 0 0;
+  margin: 0 0 157px 0;
+  overflow: hidden;
+
   .container {
     &:before {
-      display: block;
+
+      @include media('<desktop') {
+        display: none;
+      }
+
       content: '';
       width: 135px;
       min-height: 145px;
       background: url('../images/decor-block.png') bottom left/contain no-repeat;
       position: absolute;
-      top: -130px;
-      right: -125px;
-
-      @include media('<desktop') {
-        display: none;
-      }
+      top: -147px;
+      right: -77px;
     }
   }
 
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
 
     @include media('<tablet') {
       flex-wrap: wrap;
     }
+
+    display: flex;
+    justify-content: space-between;
   }
 
   &__text {
+
+    @include media('<desktop') {
+      padding: 0;
+    }
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     max-width: 440px;
+    padding: 24px 0 0 0;
   }
 
   &__visual {
-    max-width: 696px;
 
     @include media('<desktop') {
-      margin: 50px 0 0 0;
+      margin: 0 0 50px 0;
       max-width: 500px;
+      order: -1;
     }
+
+    max-width: 696px;
   }
 
   &__title {
-    max-width: 265px;
-    line-height: 48px;
 
     @include media('<tablet') {
       padding: 0 0 20px 0;
     }
+
+    max-width: 265px;
+    line-height: 48px;
   }
 
   &__description {
-    margin: 31px 0 0 0;
-    max-width: 365px;
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 300;
 
     @include media('<phone') {
       font-size: 16px;
     }
+
+    margin: 33px 0 0 0;
+    max-width: 365px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
   }
 
   &__download-btn {
+
+    @include media('<tablet') {
+      padding: 10px 45px 10px 45px;
+    }
+
     margin: 40px auto 0 0;
+    padding: 16px 65px 16px 45px;
     position: relative;
     text-align: left;
     &::before {
-      position: absolute;
-      display: block;
 
       @extend [class*=' icon-'];
       @extend .icon-down;
 
-      right: 40px;
-      top: 50%;
-      transform: translateY(-50%);
-
       @include media('<tablet') {
         right: 32px;
       }
+
+      position: absolute;
+      display: block;
+      right: 44px;
+      font-size: 16px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
@@ -102,14 +120,14 @@
     padding: 0 35px 0 0;
     position: relative;
     &::before {
+
+      @extend [class*=' icon-'];
+      @extend .icon-down;
+
       position: absolute;
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-
-      @extend [class*=' icon-'];
-      @extend .icon-down;
-      
       font-size: 15px;
       font-weight: 700;
     }

@@ -1,45 +1,39 @@
 .about-customer {
-  margin: 0 0 168px 0;
+
   @include media('<desktop') {
     margin: 0 0 84px 0;
   }
 
+  margin: 0 0 176px 0;
+
   &__wrapper {
     &::before {
-      content: '';
-      display: block;
-      width: 132px;
-      min-height: 142px;
-      position: absolute;
-      top: 241px;
-      left: -45px;
-      background: url('../images/decor-block.png') bottom left/contain no-repeat;
-      z-index: 2;
-
       @include media('<phone') {
         display: none;
       }
+
+      content: '';
+      width: 132px;
+      min-height: 142px;
+      position: absolute;
+      top: 242px;
+      left: -38px;
+      background: url('../images/decor-block.png') bottom left/contain no-repeat;
+      z-index: 2;
     }
   }
 
   .swiper {
-    width: 100%;
-    padding: 0 0 60px 0;
 
     @include media('<desktop') {
       z-index: 0;
     }
+
+    width: 100%;
+    padding: 0 0 65px 0;
   }
 
   .swiper-slide {
-    padding: 64px 126px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    background: var(--slider-bg);
-    border-radius: 24px;
 
     @include media('<desktop') {
       padding: 25px;
@@ -54,6 +48,15 @@
       min-height: auto;
       padding: 25px 15px;
     }
+
+    padding: 64px 126px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background: var(--slider-bg);
+    border-radius: 24px;
   }
 
   .swiper-slide-wrapper {
@@ -77,7 +80,6 @@
   }
 
   .swiper-button-prev {
-    left: 450px;
 
     @include media('<widescreen') {
       left: 350px;
@@ -90,10 +92,12 @@
     @include media('<tablet') {
       display: none;
     }
+
+    left: 421px;
+    bottom: 2px;
   }
 
   .swiper-button-next {
-    right: 450px;
 
     @include media('<widescreen') {
       right: 350px;
@@ -106,19 +110,23 @@
     @include media('<tablet') {
       display: none;
     }
+
+    right: 421px;
+    bottom: 2px;
   }
 
   .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
   .swiper-pagination-horizontal
     .swiper-pagination-bullets
     .swiper-pagination-bullet {
-    margin: 0 10px;
-    width: 10px;
-    height: 10px;
 
     @include media('<phone') {
       margin: 0 5px;
     }
+
+    margin: 0 10px;
+    width: 10px;
+    height: 10px;
   }
 
   .slide-title {
@@ -141,10 +149,6 @@
   }
 
   .slide-customer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 66px 0 0 0;
 
     @include media('<desktop') {
       padding: 33px 0 0 0;
@@ -154,9 +158,25 @@
       flex-wrap: wrap;
       justify-content: center;
     }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 66px 0 0 0;
   }
 
   .slide-customer-photo {
+    
+    @include media('<phone') {
+      width: 120px;
+      height: 120px;
+    }
+
+    @include media('<350px') {
+      width: 110px;
+      height: 110px;
+    }
+
     border: 5px solid #fff;
     width: 151px;
     height: 151px;
@@ -167,48 +187,41 @@
       height: 100%;
       object-fit: cover;
     }
-
-    @include media('<phone') {
-      width: 120px;
-      height: 120px;
-    }
-
-    @include media('<350px') {
-      width: 110px;
-      height: 110px;
-    }
   }
 
   .slide-customer-details {
-    padding: 0 0 0 31px;
 
     @include media('<phone') {
       padding: 0 0 0 10px;
     }
+
+    padding: 0 0 0 31px;
   }
 
   .slide-customer-name {
+
+    @include media('<phone') {
+      font-size: 18px;
+    }
+
     font-size: 22px;
     margin: 0;
     font-weight: 700;
     color: var(--color-white);
     white-space: nowrap;
-
-    @include media('<phone') {
-      font-size: 18px;
-    }
   }
 
   .slide-customer-poisition {
+
+    @include media('<tablet') {
+      margin: 0;
+    }
+
     font-size: 18px;
     font-weight: 400;
     opacity: 0.8;
     color: var(--color-white);
     line-height: 48px;
-
-    @include media('<tablet') {
-      margin: 0;
-    }
   }
 
   .slide-customer-info {
@@ -227,7 +240,6 @@
   }
 
   .slide-text-wrapper {
-    
     @include media('<1100px') {
       padding: 0 0 0 15px;
     }
@@ -238,13 +250,6 @@
   }
 
   .slide-customer-text {
-    max-width: 412px;
-    margin: 0;
-    color: var(--color-white);
-    line-height: 30px;
-    font-size: 18px;
-    font-weight: 400;
-    opacity: 0.9;
 
     @include media('<tablet') {
       text-align: center;
@@ -254,5 +259,13 @@
       font-size: 16px;
       line-height: 25px;
     }
+
+    max-width: 412px;
+    margin: 0;
+    color: var(--color-white);
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.9;
   }
 }

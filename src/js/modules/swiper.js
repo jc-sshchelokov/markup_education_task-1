@@ -3,9 +3,6 @@ Swiper.use([Navigation, Pagination, EffectFade]);
 
 const swiper = new Swiper('.swiper', {
   // Optional parameters
-  // direction: 'horizontal',
-  // loop: false,
-  // spaceBetween: 20,
   speed: 1000,
   effect: 'fade',
   fadeEffect: {

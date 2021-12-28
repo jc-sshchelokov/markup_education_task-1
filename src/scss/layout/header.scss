@@ -1,6 +1,4 @@
 .header {
-  padding: 56px 0 0 0;
-  margin: 0 0 96px 0;
 
   @include media('<desktop') {
     padding: 30px 0 0 0;
@@ -13,6 +11,9 @@
     }
   }
 
+  padding: 56px 0 0 0;
+  margin: 0 0 96px 0;
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -24,6 +25,15 @@
   }
 
   &__burger {
+
+    @include media('<tablet') {
+      display: flex;
+      position: absolute;
+      top: 30px;
+      right: 15px;
+      z-index: 1;
+    }
+    
     padding: 5px;
     display: none;
     flex-direction: column;
@@ -34,14 +44,6 @@
     background-color: var(--color-white);
     width: 30px;
     height: 30px;
-
-    @include media('<tablet') {
-      display: flex;
-      position: absolute;
-      top: 30px;
-      right: 15px;
-      z-index: 1;
-    }
 
     span {
       display: block;

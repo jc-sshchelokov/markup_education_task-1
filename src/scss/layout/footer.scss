@@ -1,8 +1,18 @@
 .footer {
+
+  @include media('<desktop') {
+    padding: 60px 0;
+  }
+
   padding: 118px 0 113px 0;
   background: var(--footer-bg);
   position: relative;
   &::before {
+
+    @include media('<phone') {
+      display: none;
+    }
+
     content: '';
     display: block;
     left: 0;
@@ -12,44 +22,36 @@
     min-height: 142px;
     background: url('../images/decor-block.png') bottom left/contain no-repeat;
     background-position: 12px 38px;
-
-    @include media('<phone') {
-      display: none;
-    }
   }
 
-  @include media('<desktop') {
-    padding: 60px 0;
-  }
   &__wrapper {
-    display: flex;
-    align-items: initial;
 
     @include media('<phone-lg') {
       flex-direction: column;
     }
+
+    display: flex;
+    align-items: initial;
   }
 
   .container {
     &::after {
+
+      @include media('<phone') {
+        display: none;
+      }
+
       content: '';
-      display: block;
       top: -216px;
       right: 0;
       position: absolute;
       width: 132px;
       min-height: 142px;
       background: url('../images/decor-block.png') bottom left/contain no-repeat;
-
-      @include media('<phone') {
-        display: none;
-      }
     }
   }
 
   &__info {
-    max-width: 391px;
-    margin: 0 145px 0 0;
 
     @include media('<desktop') {
       width: 50%;
@@ -59,6 +61,9 @@
     @include media('<phone-lg') {
       width: 100%;
     }
+
+    max-width: 391px;
+    margin: 0 145px 0 0;
   }
 
   &__info-text {
@@ -81,11 +86,7 @@
   }
 
   &__info-lists {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    
+
     @include media ('<tablet') {
       flex-wrap: wrap;
       justify-content: space-between;
@@ -96,15 +97,22 @@
       width: 100%;
       margin: 25px 0 0 0;
     }
+
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   &__lists-wrapper {
-    width: 33.33%;
-    flex-wrap: wrap;
-    padding: 10px 0 0 0;
+
     @include media ('<tablet') {
       min-width: 140px;
     }
+
+    width: 33.33%;
+    flex-wrap: wrap;
+    padding: 10px 0 0 0;
   }
 
   &__info-list {
@@ -125,17 +133,18 @@
 
   &__list-link {
     @include animate(opacity);
-    text-decoration: none;
-    display: inline-block;
-    padding: 6px 0;
-    font-size: 18px;
-    font-weight: 300;
-    color: var(--color-white);
 
     @include media('hover') {
       &:hover {
         opacity: 0.7;
       }
     }
+
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--color-white);
   }
 }
