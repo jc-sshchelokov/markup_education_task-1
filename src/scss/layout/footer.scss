@@ -29,9 +29,9 @@
     @include media('<phone-lg') {
       flex-direction: column;
     }
-
     display: flex;
     align-items: initial;
+    justify-content: flex-start;
   }
 
   .container {
@@ -49,6 +49,7 @@
       min-height: 142px;
       background: url('../images/decor-block.png') bottom left/contain no-repeat;
     }
+    max-width: 1245px;
   }
 
   &__info {
@@ -63,11 +64,11 @@
     }
 
     max-width: 391px;
-    margin: 0 145px 0 0;
+    margin: 0 135px 0 0;
   }
 
   &__info-text {
-    margin: 17px 0 0 0;
+    margin: 13px 0 0 0;
   }
 
   &__info-about {
@@ -79,7 +80,7 @@
   }
 
   &__copyright {
-    margin: 31px 0 0 0;
+    margin: 36px 0 0 0;
     display: block;
     color: var(--color-white);
     font-weight: 300;
@@ -91,17 +92,20 @@
       flex-wrap: wrap;
       justify-content: space-between;
       width: 50%;
+      padding: 10px 0 0 0;
     }
 
     @include media('<phone-lg') {
       width: 100%;
       margin: 25px 0 0 0;
+      padding: 0;
     }
 
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
+    padding: 10px 45px 0 0;
   }
 
   &__lists-wrapper {
@@ -110,9 +114,11 @@
       min-width: 140px;
     }
 
-    width: 33.33%;
+    @include media('<phone-lg') {
+      margin: 0 0 20px 0;
+    }
+
     flex-wrap: wrap;
-    padding: 10px 0 0 0;
   }
 
   &__info-list {
@@ -122,7 +128,7 @@
   }
 
   &__list-title {
-    margin: 0 0 20px 0;
+    margin: 0 0 18px 0;
     font-size: 20px;
     color: var(--color-white);
   }
