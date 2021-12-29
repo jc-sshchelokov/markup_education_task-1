@@ -1,19 +1,13 @@
 .check-articles {
+  margin: 0 0 169px 0;
 
   @include media('<desktop') {
     margin: 0 0 84px 0;
   }
 
-  margin: 0 0 169px 0;
-
   .container {
     &::before {
-
-      @include media('<phone') {
-        display: none;
-      }
-
-      content:'';
+      content: '';
       z-index: -1;
       width: 132px;
       min-height: 142px;
@@ -21,6 +15,10 @@
       position: absolute;
       top: 75px;
       left: -35px;
+
+      @include media('<phone') {
+        display: none;
+      }
     }
   }
 
@@ -33,6 +31,12 @@
   }
 
   &__cards {
+    margin: 81px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 375px));
+    grid-template-rows: minmax(512px, auto);
+    grid-auto-rows: minmax(512px, auto);
+    gap: 36px;
 
     @include media('<=desktop') {
       grid-template-columns: repeat(2, minmax(200px, 375px));
@@ -42,13 +46,6 @@
     @include media('<=650px') {
       grid-template-columns: repeat(1, minmax(200px, 375px));
     }
-
-    margin: 81px 0 0 0;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 375px));
-    grid-template-rows: minmax(512px, auto);
-    grid-auto-rows: minmax(512px, auto);
-    gap: 36px;
   }
 
   &__card {
@@ -80,11 +77,6 @@
   }
 
   &__card-link {
-
-    @include media('<widescreen') {
-      width: 35%;
-    }
-
     padding: 0 17px 0 0;
     width: 33%;
     display: block;
@@ -95,8 +87,11 @@
     position: absolute;
     bottom: 39px;
 
-    &::before {
+    @include media('<widescreen') {
+      width: 35%;
+    }
 
+    &::before {
       @extend [class*=' icon-'];
       @extend .icon-right;
 
@@ -109,14 +104,13 @@
   }
 
   &__view-btn {
-
-    @include media('<tablet') {
-      margin: 32px auto 0;
-    }
-
     display: flex;
     margin: 72px auto 0;
     align-items: flex-start;
     justify-content: center;
+
+    @include media('<tablet') {
+      margin: 32px auto 0;
+    }
   }
 }

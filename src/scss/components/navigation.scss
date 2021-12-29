@@ -2,7 +2,6 @@
   &__nav {
     @include animate(color);
     @include media('<tablet') {
-
       @include animate(top);
       position: absolute;
       z-index: 1;
@@ -30,37 +29,38 @@
   }
 
   &__nav-list {
-    @include media('<tablet') {
-      flex-direction: column;
-      align-items: center;
-    }
-
     display: flex;
     padding: 0;
     margin: 0;
     align-items: flex-start;
+
+    @include media('<tablet') {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__list-item {
-    @include media('<tablet') {
-      margin: 0;
-    }
-
     margin: 0 40px 0 0;
     list-style-type: none;
     &:last-child {
       margin: 0;
     }
+
+    @include media('<tablet') {
+      margin: 0;
+    }
   }
 
   &__list-link {
-
     @include animate(color);
-    @include media('<tablet') {
-      color: var(--color-white);
-      opacity: 1;
-      padding: 10px 0;
-      text-decoration: underline;
+
+    text-decoration: none;
+    display: inline-block;
+    color: var(--header-links);
+    font-size: 18px;
+    &_active {
+      color: var(--color-black);
     }
 
     @include media('hover') {
@@ -69,9 +69,11 @@
       }
     }
 
-    text-decoration: none;
-    display: inline-block;
-    color: var(--header-links);
-    font-size: 18px;
+    @include media('<tablet') {
+      color: var(--color-white);
+      opacity: 1;
+      padding: 10px 0;
+      text-decoration: underline;
+    }
   }
 }
