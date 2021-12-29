@@ -7,14 +7,14 @@
 
   .container {
     &::before {
-      content: '';
+      content: "";
       z-index: -1;
-      width: 132px;
-      min-height: 142px;
-      background: url('../images/decor-block.png') bottom left/contain no-repeat;
+      width: 134px;
+      min-height: 145px;
+      background: url(../images/decor-block.png) bottom left/contain no-repeat;
       position: absolute;
-      top: 75px;
-      left: -35px;
+      top: 84px;
+      left: -36px;
 
       @include media('<phone') {
         display: none;
@@ -77,19 +77,13 @@
   }
 
   &__card-link {
-    padding: 0 17px 0 0;
-    width: 33%;
-    display: block;
-    color: var(--blue-color);
+    padding: 0 43px 0 0;
+    display: inline-block;
+    color: var(--color-blue);
     text-decoration: none;
     font-weight: 600;
-    margin: 25px 0 0 0;
     position: absolute;
-    bottom: 39px;
-
-    @include media('<widescreen') {
-      width: 35%;
-    }
+    bottom: 37px;
 
     &::before {
       @extend [class*=' icon-'];
@@ -105,7 +99,7 @@
 
   &__view-btn {
     display: flex;
-    margin: 72px auto 0;
+    margin: 74px auto 0;
     align-items: flex-start;
     justify-content: center;
 

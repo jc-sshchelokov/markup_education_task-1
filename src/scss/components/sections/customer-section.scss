@@ -24,7 +24,7 @@
 
   .swiper {
     width: 100%;
-    padding: 0 0 65px 0;
+    padding: 0 0 60px 0;
 
     @include media('<desktop') {
       z-index: 0;
@@ -32,12 +32,12 @@
   }
 
   .swiper-slide {
-    padding: 64px 161px 80px 126px;
+    padding: 64px 126px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
-    height: auto;
+    min-height: 425px;
     background: var(--slider-bg);
     border-radius: 24px;
 
@@ -117,6 +117,7 @@
     margin: 0 10px;
     width: 10px;
     height: 10px;
+    background-color: var(--color-blue);
 
     @include media('<phone') {
       margin: 0 5px;
@@ -183,7 +184,8 @@
 
   .slide-customer-details {
     font-size: 22px;
-    margin: 24px 0 0 0;
+    line-height: 22px;
+    margin: 17px 0 0 0;
     font-weight: 700;
     color: var(--color-white);
     white-space: nowrap;
@@ -196,12 +198,16 @@
   }
 
   .slide-customer-name {
+    margin: 0;
+    color: var(--color-white);
+
     @include media('<phone') {
       font-size: 18px;
     }
   }
 
   .slide-customer-poisition {
+    margin: 0;
     font-size: 18px;
     font-weight: 400;
     opacity: 0.8;
@@ -229,6 +235,7 @@
   }
 
   .slide-text-wrapper {
+    padding: 0 37px 0 0;
     @include media('<1100px') {
       padding: 0 0 0 15px;
     }

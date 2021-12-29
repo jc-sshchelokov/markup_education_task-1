@@ -7,15 +7,28 @@
     padding: 60px 0;
   }
   &::before {
-    content: '';
+    content: "";
     display: block;
     left: 0;
     bottom: 0;
     position: absolute;
-    width: 142px;
+    width: 138px;
+    min-height: 142px;
+    background: url(../images/decor-block.png) 13px 37px/contain no-repeat;
+
+    @include media('<phone') {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: '';
+    top: -99px;
+    right: 112px;
+    position: absolute;
+    width: 132px;
     min-height: 142px;
     background: url('../images/decor-block.png') bottom left/contain no-repeat;
-    background-position: 12px 38px;
 
     @include media('<phone') {
       display: none;
@@ -34,25 +47,11 @@
 
   .container {
     max-width: 1245px;
-
-    &::after {
-      content: '';
-      top: -216px;
-      right: 0;
-      position: absolute;
-      width: 132px;
-      min-height: 142px;
-      background: url('../images/decor-block.png') bottom left/contain no-repeat;
-
-      @include media('<phone') {
-        display: none;
-      }
-    }
   }
 
   &__info {
     max-width: 391px;
-    margin: 0 135px 0 0;
+    margin: 0 143px 0 0;
 
     @include media('<desktop') {
       width: 50%;
@@ -88,7 +87,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 10px 45px 0 0;
+    padding: 11px 45px 0 0;
 
     @include media('<tablet') {
       flex-wrap: wrap;
