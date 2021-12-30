@@ -1,39 +1,15 @@
 body.nav-open {
   @include media('<tablet') {
     overflow: hidden;
-    .header__nav {
-      padding: 50px 0;
-      top: 0;
-    }
-
-    .header__burger {
-      background-color: transparent;
-      border-color: var(--color-white);
-
-      span {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        &:nth-child(1) {
-          transform: rotate(-45deg);
-          background-color: var(--color-white);
-        }
-        &:nth-child(2) {
-          opacity: 0;
-        }
-        &:nth-child(3) {
-          transform: rotate(45deg);
-          background-color: var(--color-white);
-        }
-      }
-    }
   }
 }
 
 .header {
   &__nav {
     @include animate(color);
+
     @include media('<tablet') {
+
       @include animate(top);
 
       position: absolute;
@@ -55,6 +31,11 @@ body.nav-open {
         position: absolute;
         bottom: 2px;
       }
+    }
+
+    .nav-open & {
+      padding: 50px 0;
+      top: 0;
     }
   }
 

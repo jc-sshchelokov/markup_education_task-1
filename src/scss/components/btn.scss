@@ -24,7 +24,7 @@
     color: var(--color-white);
     @include media("<tablet") {
       background: var(--color-white);
-      color: var(--blue-color);
+      color: var(--color-blue);
     }
   }
 }

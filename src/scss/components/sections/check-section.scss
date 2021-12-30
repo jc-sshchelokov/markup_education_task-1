@@ -77,13 +77,13 @@
   }
 
   &__card-link {
+    margin: 25px 0 0 0;
     padding: 0 43px 0 0;
     display: inline-block;
     color: var(--color-blue);
     text-decoration: none;
     font-weight: 600;
-    position: absolute;
-    bottom: 37px;
+    position: relative;
 
     &::before {
       @extend [class*=' icon-'];
